@@ -569,8 +569,8 @@
         letter-spacing: 4px;
     }
     .balltop {
-        top: 15px;
-        right: 5px;
+        top: -4px;
+        right: 18px;
         width: 40%;
     }
     .ballbottom {
