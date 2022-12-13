@@ -2,7 +2,104 @@
     margin: 0;
     padding: 0;
 }
+body{
+    margin: 0%;
+    padding: 0%;
+    /* font-family: "Arial", Helvetica, sans-serif; */
+}
+.stage {
+    /* border-bottom: 3px solid #444; */
+    /* display: flex; */
+    /* height: 330px; */
+    width: 100%;
+}
+.box {
+   
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+.bounce-2 {
+    animation-name: bounce-2;
+    animation-timing-function: ease;
+}
+@keyframes bounce-2 {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-50px); }
+    100% { transform: translateY(0); }
+}   
 
+/* block-$ */
+.block-effect {
+    font-size: calc(8px + 6vw);
+  }
+  
+  .block-reveal {
+    --t: calc(var(--td) + var(--d));
+  
+    color: transparent;
+    padding: 4px;
+  
+    position: relative;
+    overflow: hidden;
+  
+    animation: revealBlock 0s var(--t) forwards;
+  }
+  
+  .block-reveal::after {
+    content: '';
+  
+    width: 0%;
+    height: 100%;
+    padding-bottom: 4px;
+  
+    position: absolute;
+    top: 0;
+    left: 0;
+  
+    background: var(--bc);
+    animation: revealingIn var(--td) var(--d) forwards, revealingOut var(--td) var(--t) forwards;
+  }
+  
+  
+  /* animations */
+  @keyframes revealBlock {
+    100% {
+      /* color: #0f0f0f; */
+      color: #d3cbcb;
+    }
+  }
+  
+  @keyframes revealingIn {
+  
+    0% {
+      width: 0;
+    }
+  
+    100% {
+      width: 100%;
+    }
+  }
+  
+  @keyframes revealingOut {
+  
+    0% {
+      transform: translateX(0);
+    }
+  
+    100% {
+      transform: translateX(100%);
+    }
+  
+  }
+  
+i{
+    font-size: 30px;
+    cursor: pointer;
+    /* position: absolute; */
+    /* top: 50%; */
+    left: 50%;
+    /* transform: translate(-50%, -50%); */
+}
 /* top bar */
 .navigation {
     display: flex;
@@ -48,11 +145,11 @@
     letter-spacing: 10px;
     text-align: center;
     padding: 3px;
+    padding-bottom: 15px;
 
 }
 
 .main-para {
-    
     top: 550px;
     left: 365px;
     color: #f2f2f2;
@@ -72,19 +169,21 @@
 
 
 .container2 {
+    
     width: 100%;
-    height: 200px;
+    height: 250px;
     text-transform: uppercase;
-    letter-spacing: 8px;
+    letter-spacing: 5px;
     text-align: center;
     background-color: #FFFFFF;
     line-height: 200%;
     margin: 80px 0px;
+    /* margin: auto; */
     font-family: 'Heebo', sans-serif;
-    position: relative; 
+    position: relative;
 }
 
-.rectangle1 {
+/* .rectangle1 {
     background-color: #66B937;
     width: 350px;
     height: 5px;
@@ -92,7 +191,7 @@
     top: 50%;
     left: 25em;
     transform: rotate(-54deg);
-}
+} */
 
 
 .container3 {
@@ -302,6 +401,8 @@
     margin: 0px 230px;
 
 }
+
+
 
 @media only screen and (max-width: 1100px) {
     .main_heading {
